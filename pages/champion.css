@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,600;0,700;0,900;1,100;1,400;1,900&family=Nothing+You+Could+Do&family=Sansita+Swashed:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://supercairo.com/wp-content/uploads/2017/03/%D8%B5%D9%88%D8%B1-%D8%B1%D9%85%D8%B2%D9%8A%D8%A7%D8%AA-%D9%88%D8%AE%D9%84%D9%81%D9%8A%D8%A7%D8%AA-%D8%B9%D9%86-%D8%A7%D9%84%D9%86%D8%A7%D8%AF%D9%8A-%D8%A7%D9%84%D8%A7%D9%87%D9%84%D9%8A-Ahly-Club-14.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+::selection {
+    color: #fff;
+    background: #ff7979;
+}
+
+.nav {
+    padding: 10px;
+}
+
+.nav-item a {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-left: 10px;
+}
+
+.nav-item a:hover {
+    background-color: red;
+    color: white;
+}
+
+.champion {
+    max-width: 1080px;
+    margin: 50px auto;
+    padding: 0 20px;
+    position: relative;
+}
+
+.champion .center-line {
+    position: absolute;
+    height: 100%;
+    width: 4px;
+    background: #fff;
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+}
+
+.champion .row {
+    display: flex;
+}
+
+.champion .row-1 {
+    justify-content: flex-start;
+}
+
+.champion .row-2 {
+    justify-content: flex-end;
+}
+
+.champion .row section {
+    background: #fff;
+    border-radius: 5px;
+    width: calc(50% - 40px);
+    padding: 20px;
+    position: relative;
+}
+
+.champion .row section::before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    background: #fff;
+    top: 28px;
+    z-index: -1;
+    transform: rotate(45deg);
+}
+
+.row-1 section::before {
+    right: -7px;
+}
+
+.row-2 section::before {
+    left: -7px;
+}
+
+.row section .icon,
+.center-line .scroll-icon {
+    position: absolute;
+    background: #f2f2f2;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ff7979;
+    font-size: 17px;
+    box-shadow: 0 0 0 4px #fff, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+}
+
+.center-line .scroll-icon {
+    bottom: 0px;
+    left: 50%;
+    font-size: 25px;
+    transform: translateX(-50%);
+}
+
+.row-1 section .icon {
+    top: 15px;
+    right: -60px;
+}
+
+.row-2 section .icon {
+    top: 15px;
+    left: -60px;
+}
+
+.row section .details,
+.row section .bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.row section .details .title {
+    font-size: 22px;
+    font-weight: 600;
+
+
+}
+
+.row section .details span:last-child {
+    text-align: center;
+    border: 5px solid blue;
+    background-color: transparent;
+    color: red;
+    border-radius: 20px;
+    font-weight: 800;
+    font-size: 22px;
+    text-transform: capitalize;
+    padding: 7px;
+    transition: .6s;
+}
+
+/* .row section .details span:last-child:hover {
+    transform: scale(1.1);
+} */
+
+.row section p {
+    margin: 10px 0 17px 0;
+
+}
+
+.row section .bottom a {
+    text-decoration: none;
+    background: #ff7979;
+    color: white;
+    padding: 7px 15px;
+    border-radius: 5px;
+    /* font-size: 17px; */
+    font-weight: 400;
+    transition: all 0.3s ease;
+}
+
+.row section .bottom a:hover {
+    transform: scale(0.97);
+    color: white;
+    background-color: red;
+}
+
+@media(max-width: 890px) {
+    .champion .center-line {
+        left: 40px;
+    }
+
+    .champion .row {
+        margin: 30px 0 3px 60px;
+    }
+
+    
+
+    .champion .row section {
+        width: 100%;
+    }
+
+    .row section .details span:last-child {
+        text-align: center;
+        border: 2px solid blue;
+        background-color: transparent;
+        color: red;
+        border-radius: 4px;
+        font-weight: 700;
+        font-size: 16px;
+        text-transform: none;
+        padding: 4px;
+
+    }
+
+    .row-1 section::before {
+        left: -7px;
+    }
+
+    .row-1 section .icon {
+        left: -60px;
+    }
+}
+
+@media(max-width: 440px) {
+
+    .champion .center-line,
+    .row section::before,
+    .row section .icon {
+        display: none;
+    }
+    #footer .container p {
+        font-size: 12px;
+    }
+    .champion{margin:auto}
+
+    .bottom a {
+        padding: 0 10px;
+        font-size: 16px;
+        font-weight: 300;
+        display: inline-block;
+        text-align: center;
+        color: white
+    }
+
+    .champion .row {
+        margin: 10px 0;
+    }
+
+    .nav-item a {
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+    }
+
+    .title span {
+        font-size: 10px;
+    }
+
+    .nav {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        overflow: hidden;
+        background: none !important;
+    }
+    /* body{overflow: hidden;} */
+
+    .row p {
+        font-size: 12px;
+    }
+
+    .row section .details span:last-child {
+
+
+        display: none;
+    }
+}
+
+/*footer*/
+#footer p {
+    font-size: 13px;
+    text-align: left;
+    margin: 3px
+}
+
+#footer .container p,#footer .container p span {
+    text-align: center;
+
+    color: whitesmoke;
+    font-weight: 100;
+    font-size: 20px;
+    padding: 5px 10px;
+    font-family: 'Sansita Swashed', cursive;
+    letter-spacing: 2px;
+
+}
+#footer .container p span {color:#f50}
+
+#footer {
+    padding: 5px 20px;
+    text-align: center;
+    background-color: #000;
+    font-family: 'Sansita Swashed', cursive;
+}
